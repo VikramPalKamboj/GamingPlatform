@@ -1,0 +1,65 @@
+<p>
+  profile2 works!
+</p>
+
+{{uidd}}
+
+<!--
+
+<div *ngFor="let profile of profile " >
+
+
+
+  <ul *ngIf ="(profileList == !null)">
+    <li *ngFor="let profileList of profileList | async">
+      {{ item.profileList.age }}
+    </li>
+  </ul>&ndash;&gt;
+  &lt;!&ndash;<a [routerLink]="['/profile2']">Listing</a>
+  {{profile | async | json }}
+  {{profile1 | async | json }}-->
+<div *ngIf="listing">
+  <a [routerLink]="['/profile']"><h3 style="color:white;">Go Back</h3></a>
+<div class="row">
+  <div class="col-md-4">
+    <img style="width:100%" class="thumbnail" src="{{imageUrl}}" />
+  </div>
+  <div class="container">           
+  <table style="background-color:white" class="table table-condensed">
+    <thead>
+      <tr>
+        <th>NAME</th>
+        <th>AGE</th>
+        <th>GAME PLATEFORM</th>
+        <th>GAME NAME</th>
+        <th>PLAYER ID</th>
+        </tr>
+        <tr>
+        <th>PLAYZONE</th>
+       <th>time1</th>
+        <th>time2</th>
+        <th>time3</th>
+        <th>time4</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{listing.name}}</td>
+        <td>{{listing.age}}</td>
+        <td>{{listing.gamep}}</td>
+        <td> {{listing.gamen}}</td>
+        <td> {{listing.playerid}}</td>
+      </tr>
+      <tr>
+        <td> {{listing.playzone}}</td>
+        <td> {{listing.time1}}</td>
+        <td> {{listing.tim2}}</td>
+        <td> {{listing.time3}}</td>
+        <td> {{listing.time4}}</td>
+	      <td> {{listing.time4}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  </div>
+  </div>

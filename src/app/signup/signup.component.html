@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="form-container">
+    <a routerLink="/home">Go back</a>
+
+    <h2>Please register here</h2>
+
+
+    <form #formData='ngForm' (ngSubmit)="onSubmit(formData)">
+
+      <input  class="form-control" type="text" placeholder="Email address.." (ngModel)="email" name="email" class="txt"  required>
+      <input class="form-control" type="password" placeholder="Password" (ngModel)="password" name="password" class="txt"  required>
+      <input class="form-control" type="password" placeholder="Re-enter-Password"  name="password" class="txt" required>
+
+
+      <button type="submit" class="basic-btn">Create my account</button>
+    </form>
+    
+    
+  </div>
+</div>
+
+<h3>{{messages}}</h3>
+
+<div class="row">
+<form #formData='ngForm' (ngSubmit)="onSubmits(formData)">
+    <input  class="form-control" type="text" placeholder="Email address.." (ngModel)="email" name="email" class="txt"  required>
+    <button type="submit" [disabled]="!formData.valid" class="basic-btn">Reset Password</button>
+</form>
+
+</div>

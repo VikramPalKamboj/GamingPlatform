@@ -1,0 +1,194 @@
+
+<form style="width:500px; background-color:white; margin-bottom:50px; border-radius:10px; padding:40px; margin-left:300px" (submit)="onMatchRequest()">
+
+  <div class="form-group">
+    <label>Game-Name</label>
+    <select class="form-control" type="text" [(ngModel)]="gamen" name="gamen" required>
+      <option value="Destiny">Destiny</option>
+      <option value="Diablo 3">Diablo 3</option>
+      <option value="Left 4 Dead 2">Left 4 Dead 2</option>
+      <option value="World of Warcraft">World of Warcraft</option>
+    </select>
+  </div>
+  
+  <div class="form-group">
+    <label>Game Plateform</label>
+    <select class="form-control" type="text" [(ngModel)]="gamep" name="gamep" required>
+      <option value="PS">PS</option>
+      <option value="PS3">PS3</option>
+      <option value="PS4">PS4</option>
+      <option value="XBox">Xbox</option>
+      <option value="XB1">XB1</option>
+    </select>
+  </div>
+  
+  <div class="form-group">
+    <label>Type of Team</label>
+    <select class="form-control" type="text" [(ngModel)]="teamType" name="teamType" required>
+        <option value="" selected disabled> Please Select The Team Type</option>
+        <option value="Any">Any</option>
+        <option value="Casual">Casual</option>
+        <option value="Serious">Serious</option>
+        <option value="Zealous">Zealous</option>
+    </select>
+  </div>
+  
+  <div class="form-group">
+    <label>Match or Events</label>
+    <select class="form-control" type="text" [(ngModel)]="matechEvent" name="matechEvent" required>
+        <option value="" selected disabled> Please Select Match or Event Type</option>
+            <option value="Strategy">Strategy</option>
+            <option value="Survival horror">Survival horror</option>
+            <option value="Massively multiplayer online">Massively multiplayer online</option>
+            <option value="Action-adventure">Action-adventure</option>
+            <option value="Hardcore mode">Hardcore mode</option>
+            <option value="Parental controls">Parental controls</option>
+            <option value="Ongoing gameplay">Ongoing gameplay</option>
+            <option value="Scavenge">Scavenge</option>
+            <option value="Campaign">Campaign</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label>Player ZONE</label>
+    <select  class="form-control" type="text" [(ngModel)]="playzone" name="playzone" required>
+      <option value="" selected disabled>Please Select Playing Time for WeekDays</option>
+      <option value="00:00 - 01:00 AM">00:00 - 01:00 AM</option>
+      <option value="01:00 - 02:00 AM">01:00 - 02:00 AM</option>
+      <option value="02:00 - 03:00 AM">02:00 - 03:00 AM</option>
+      <option value="03:00 - 04:00 AM">03:00 - 04:00 AM</option>
+      <option value="05:00 - 06:00 AM">05:00 - 06:00 AM</option>
+      <option value="06:00 - 07:00 AM">06:00 - 07:00 AM</option>
+      <option value="07:00 - 08:00 AM">07:00 - 08:00 AM</option>
+      <option value="08:00 - 09:00 AM">08:00 - 09:00 AM</option>
+      <option value="09:00 - 10:00 AM">09:00 - 10:00 AM</option>
+      <option value="10:00 - 11:00 AM">10:00 - 11:00 AM</option>
+      <option value="11:00 - 12:00 AM">11:00 - 12:00 AM</option>
+      <option value="12:00 - 13:00 PM">12:00 - 13:00 PM</option>
+      <option value="13:00 - 14:00 PM">13:00 - 14:00 PM</option>
+      <option value="14:00 - 15:00 PM">14:00 - 15:00 PM</option>
+      <option value="15:00 - 16:00 PM">15:00 - 16:00 PM</option>
+      <option value="16:00 - 17:00 PM">16:00 - 17:00 PM</option>
+      <option value="17:00 - 18:00 PM">17:00 - 18:00 PM</option>
+      <option value="18:00 - 19:00 PM">18:00 - 19:00 PM</option>
+      <option value="19:00 - 20:00 PM">19:00 - 20:00 PM</option>
+      <option value="20:00 - 21:00 PM">20:00 - 21:00 PM</option>
+      <option value="21:00 - 22:00 PM">21:00 - 22:00 PM</option>
+      <option value="22:00 - 23:00 PM">22:00 - 23:00 PM</option>
+      <option value="23:00 - 00:00 PM">23:00 - 00:00 PM</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label>Player WeekDay Playing Time to:</label>
+    <select class="form-control" type="text" [(ngModel)]="time2" name="time2" required>
+      <option value="" selected disabled>Please Select Playing Time for WeekDays</option>
+      <option value="00:00 - 01:00 AM">00:00 - 01:00 AM</option>
+      <option value="01:00 - 02:00 AM">01:00 - 02:00 AM</option>
+      <option value="02:00 - 03:00 AM">02:00 - 03:00 AM</option>
+      <option value="03:00 - 04:00 AM">03:00 - 04:00 AM</option>
+      <option value="05:00 - 06:00 AM">05:00 - 06:00 AM</option>
+      <option value="06:00 - 07:00 AM">06:00 - 07:00 AM</option>
+      <option value="07:00 - 08:00 AM">07:00 - 08:00 AM</option>
+      <option value="08:00 - 09:00 AM">08:00 - 09:00 AM</option>
+      <option value="09:00 - 10:00 AM">09:00 - 10:00 AM</option>
+      <option value="10:00 - 11:00 AM">10:00 - 11:00 AM</option>
+      <option value="11:00 - 12:00 AM">11:00 - 12:00 AM</option>
+      <option value="12:00 - 13:00 PM">12:00 - 13:00 PM</option>
+      <option value="13:00 - 14:00 PM">13:00 - 14:00 PM</option>
+      <option value="14:00 - 15:00 PM">14:00 - 15:00 PM</option>
+      <option value="15:00 - 16:00 PM">15:00 - 16:00 PM</option>
+      <option value="16:00 - 17:00 PM">16:00 - 17:00 PM</option>
+      <option value="17:00 - 18:00 PM">17:00 - 18:00 PM</option>
+      <option value="18:00 - 19:00 PM">18:00 - 19:00 PM</option>
+      <option value="19:00 - 20:00 PM">19:00 - 20:00 PM</option>
+      <option value="20:00 - 21:00 PM">20:00 - 21:00 PM</option>
+      <option value="21:00 - 22:00 PM">21:00 - 22:00 PM</option>
+      <option value="22:00 - 23:00 PM">22:00 - 23:00 PM</option>
+      <option value="23:00 - 00:00 PM">23:00 - 00:00 PM</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label>Player WeekDay Playing Time from:</label>
+    <select class="form-control" type="text" [(ngModel)]="time3" name="time3" required>
+      <option value="" selected disabled >Please Select Playing Time for WeekEnds</option>
+      <option value="00:00 - 01:00 AM">00:00 - 01:00 AM</option>
+      <option value="01:00 - 02:00 AM">01:00 - 02:00 AM</option>
+      <option value="02:00 - 03:00 AM">02:00 - 03:00 AM</option>
+      <option value="03:00 - 04:00 AM">03:00 - 04:00 AM</option>
+      <option value="05:00 - 06:00 AM">05:00 - 06:00 AM</option>
+      <option value="06:00 - 07:00 AM">06:00 - 07:00 AM</option>
+      <option value="07:00 - 08:00 AM">07:00 - 08:00 AM</option>
+      <option value="08:00 - 09:00 AM">08:00 - 09:00 AM</option>
+      <option value="09:00 - 10:00 AM">09:00 - 10:00 AM</option>
+      <option value="10:00 - 11:00 AM">10:00 - 11:00 AM</option>
+      <option value="11:00 - 12:00 AM">11:00 - 12:00 AM</option>
+      <option value="12:00 - 13:00 PM">12:00 - 13:00 PM</option>
+      <option value="13:00 - 14:00 PM">13:00 - 14:00 PM</option>
+      <option value="14:00 - 15:00 PM">14:00 - 15:00 PM</option>
+      <option value="15:00 - 16:00 PM">15:00 - 16:00 PM</option>
+      <option value="16:00 - 17:00 PM">16:00 - 17:00 PM</option>
+      <option value="17:00 - 18:00 PM">17:00 - 18:00 PM</option>
+      <option value="18:00 - 19:00 PM">18:00 - 19:00 PM</option>
+      <option value="19:00 - 20:00 PM">19:00 - 20:00 PM</option>
+      <option value="20:00 - 21:00 PM">20:00 - 21:00 PM</option>
+      <option value="21:00 - 22:00 PM">21:00 - 22:00 PM</option>
+      <option value="22:00 - 23:00 PM">22:00 - 23:00 PM</option>
+      <option value="23:00 - 00:00 PM">23:00 - 00:00 PM</option>
+    </select>
+  </div>
+  
+  <div class="form-group">
+  <label for="comment">description:</label>
+  <textarea class="form-control" rows="5" type="text" [(ngModel)]="description" name="description" required></textarea>
+  </div>
+  
+  <input type="submit"  value="submit" class="btn btn-success">
+</form>
+
+
+
+
+<div class="row">
+  <div class="col-xs-12">
+    <form class="well">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search Game by Name, Plateform, and USER ID" [(ngModel)]="search" name="search" (keyup)="searchProps()">
+        <input type="text" class="form-control" placeholder="Search Game by plateform" [(ngModel)]="search" name="search1" (keyup)="searchProps2()">
+        <input type="text" class="form-control" placeholder="Search Game by team type" [(ngModel)]="search" name="search2" (keyup)="searchProps3()">
+        <input type="text" class="form-control" placeholder="Search Game by Match or Event" [(ngModel)]="search" name="search3" (keyup)="searchProps4()">
+
+
+
+      </div>
+    </form>
+    <table style="background-color:white" class="table table-bordered">
+    <thead>
+      <tr style="background-color:lightgreen">
+        <th>Game NAME</th>
+        <th>Plateform</th>
+        <th>Time</th>
+         <th>Match or Event</th>
+         <th>Type of team</th>
+         <th>Time</th>
+          <th>DELETE</th>
+      </tr>
+    </thead>
+    <tbody>
+        
+      <tr style="background-color:skyblue" *ngFor="let listing of listings">
+        <td>{{listing.gamen}}</td>
+        <td>{{listing.gamep}}</td>
+        <td>{{listing.matechEvent}}</td>
+        <td>{{listing.teamType}}</td>
+        <td>{{listing.playzone}}</td>
+        <td><button *ngIf="listing.uid==uidd" (click)="delete()">Delete</button></td>
+
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="col-xs-12" *ngIf="count === 0">Not properties found.</div>
+</div>
+

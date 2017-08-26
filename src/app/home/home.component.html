@@ -1,0 +1,30 @@
+<div class="container" style="background-color: #11a9a2;  height: 338px">
+  <div class="row">
+    <div *ngIf="!(af.auth | async)" class="col-md-4 col-md-offset-4">
+
+      <div class="form-container">
+        <a routerLink="/login" id="goback">Go back</a>
+        <h2>Custom Login</h2>
+
+
+        <form #formData='ngForm' (ngSubmit)="onSubmit(formData)">
+
+          <input type="text" style="height: 41px; width: 359px; border-radius: 13px" placeholder="Email address.." (ngModel)="email" name="email" class="txt" required>
+          <input type="password" style="border-radius: 13px;" placeholder="Password" (ngModel)="password" name="password" class="txt" required>
+
+          <button type="submit" [disabled]="!formData.valid" class="basic-btn">Log in</button>
+          <a routerLink="/signup">Don't have an account?</a>
+        </form>
+      </div>
+
+      <div class="social-login">
+              <p>- - - - - - - - - - - - - Sign In With - - - - - - - - - - - - - </p>
+              <ul>
+                <li><a (click)="loginFb()"><i class="fa fa-facebook"></i> Facebook</a></li>
+                <li><a (click)="login()"><i class="fa fa-google-plus"></i> Google+</a></li>
+                <li><a (click)="loginGH()"><i class="fa fa-github"></i> Github</a></li>
+              </ul>
+            </div>
+  </div>
+</div>
+</div>

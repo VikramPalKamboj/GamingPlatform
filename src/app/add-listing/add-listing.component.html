@@ -1,0 +1,58 @@
+<a [routerLink]="['/listings']">Back</a>
+<br />
+<h2 class="page-header">Add Listing</h2>
+<form style="width:500px; background-color:white; margin-bottom:50px; border-radius:10px; padding:40px; margin-left:300px" (submit)="onAddSubmit()">
+  <div class="form-group">
+    <label>Game Name</label>
+    <input class="form-control" type="text" [(ngModel)]="title" name="title" required>
+  </div>
+  <div class="form-group">
+    <label>Character</label>
+    <input class="form-control" type="text" [(ngModel)]="character" name="character" required>
+  </div>
+
+  <h2>PC</h2>
+  <div class="form-group">
+    <label>Plateform1</label>
+    <input class="form-control" type="text" [(ngModel)]="plateform1" name="plateform1">
+  </div>
+
+  <h2>PS3</h2>
+  <div class="form-group">
+    <label>Plateform1</label>
+    <input class="form-control" type="text" [(ngModel)]="plateform2" name="plateform2">
+  </div>
+
+  <h2>PS4</h2>
+  <div class="form-group">
+    <label>Plateform1</label>
+    <input class="form-control" type="text" [(ngModel)]="plateform3" name="plateform3">
+  </div>
+
+  <h2>XBOX</h2>
+  <div class="form-group">
+    <label>Plateform1</label>
+    <input class="form-control" type="text" [(ngModel)]="plateform4" name="plateform4">
+  </div>
+
+  <h2>XB1</h2>
+  <div class="form-group">
+    <label>Plateform1</label>
+    <input class="form-control" type="text" [(ngModel)]="plateform5" name="plateform5">
+  </div>
+
+  <!--<div class="form-group">
+    <label>Game Plateform</label>
+    <select class="form-control" type="text" [(ngModel)]="plateform" name="plateform" required>
+      <option value="PS">PS</option>
+      <option value="PS3">PS3</option>
+      <option value="PS4">PS4</option>
+      <option value="XBox">Xbox</option>
+      <option value="XB1">XB1</option>
+    </select>
+  </div>-->
+  <div class="form-group">
+    <input id="image" name="image" [(ngModel)]="image" type="file" >
+  </div>
+  <input type="submit" value="submit" class="btn btn-success">
+</form>
